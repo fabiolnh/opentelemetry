@@ -1,2 +1,3 @@
-# opentelemetry
-OpenTelemetry
+# Open Telemetry (Currently Studying)
+
+- 
