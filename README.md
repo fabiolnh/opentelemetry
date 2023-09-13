@@ -17,7 +17,7 @@
     - Observability Framework
     - Tools: APIs and SDKs
     - Instrumentation, Generation, data export
-- Mainly Components:
+- Main Components:
     - Specifications
         * Data
         * SDKs (it brings the SDKs to work with all languages)
