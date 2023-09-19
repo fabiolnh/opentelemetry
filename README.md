@@ -29,7 +29,16 @@
     - Libs
         * Vendor-Agnostic
         * Tracing and Logs
-        * Auto Tracing (in some languages, you can inject something at the execution time. The agent helps to generate the information without change the code. This way you do not need to inject manually the tracing in the code)
+        * Auto Tracing (in some languages, you can inject something at the execution time. The agent helps to generate the information without changing the code. This way you do not need to inject manually the tracing in the code)
     - Logs
 
 - OBS: some languages and some things in Open Telemetry are not 100% done, because there are a lot of vendors, SDKs, Libs to implement. Visit the website to check it. Ex: https://opentelemetry.io/docs/instrumentation/java/ - Traces (Stable) Metrics (Stable) Logs (Stable)
+
+- Options with Collector:
+    1) No Collector: just using libs to send directly to the vendor
+    2) Collector Agent (sidecar): an app that stays "aside of the application (in the same pod)" that receives the information and then exports to the vendor
+    3) Collector Server: A service that stays apart from the application. The application send the information to the Server and the Server sends to the Vendor
+
+- Instrumentation: The way that treats the information in your app and sends it to the collector or to the vendor. Options:
+    1) Automatically (a lib that everytime is getting all the information of your app and sending it to the vendor) (ex: with java, you can run a command to run the application with the jar from the OpenTelemetry)  (it is not available in all languages, and probably some languages will never have it)
+    2) Manually (check the code and choose what you want to be sent, coding it)
