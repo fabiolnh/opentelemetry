@@ -1,4 +1,4 @@
-# Open Telemetry (Currently Studying)
+# Open Telemetry
 
 - Project built by CNCF (same foundation that invented Kubernetes)
 
